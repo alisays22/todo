@@ -1,77 +1,106 @@
-
 .main {
   padding-top: 20px;
   border: solid 3px rgb(89, 195, 108);
-    display: flex;
-    box-shadow: 5px,0,0,5px black;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px auto;
-    width: 600px; 
-    height: 600px;
-    border-radius: 10px;
+  display: flex;
+  box-shadow: 5px, 0, 0, 5px black;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  width: 600px;
+  /* height: 800px; */
+  height: 100%;
+  border-radius: 10px;
+}
+
+.header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.input {
+  height: 125px;
+  width: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.allButton {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-success {
+  margin-left: 10px;
+}
+
+.task-item {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  width: 450px;
+}
+
+.tasks button {
+  margin: 15px;
+}
+
+/* .form-check-input {
+  /* Ваши стили для чекбоксов */
+/* } */ 
+
+.text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-right: 50px;
+  margin-left: 10px;
+  flex: 1;
+}
+
+.btn-close {
+  transition: transform 0.3s;
+}
+
+.btn-close:hover {
+  transform: rotate(90deg);
+}
+
+/* Теперь добавьте стили для узких экранов в медиа-запросе. */
+@media (max-width: 768px) {
+  .main {
+    width: 90%; /* Увеличьте ширину и центрируйте блок на узких экранах. */
+    height: 50rem;
+    padding: 10px;
+    margin: 20px auto;
   }
 
-  .header{
+  .input {
+    flex-direction: column; /* Измените направление flex-контейнера для input на вертикальное. */
+    width: 90%; /* Увеличьте ширину input на узких экранах. */
+  }
+
+  .form-check-input {
+    margin-left: 1rem; 
+  }
+
+  .text {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    /* text-shadow: 0px 5px 100px rgb(2, 2, 2), 0 5px 0.5em rgb(255, 255, 255); */
-  }
-  
-  .input {
-    height: 125px;
-    width: 500px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
-    justify-content: space-between;
-    margin-bottom: 50px;
-  }
+    width: 100%; /* Увеличьте ширину и центрируйте блок на узких экранах. */
+    height: 1rem;
 
-  .allButton{
-    display: flex;
-    justify-content: space-around
+    margin-left: 1rem; 
   }
-  
-
-  /* кнопка добавить */
-.btn-success{
-    margin-left: 10px;
-}
-  
-  .task-item {
-    padding: 15px;
-    display: flex; 
-    align-items: center; 
-    width: 450px
-    
-}
-  
-
-  .tasks button {
-    margin: 15px;
-  }
-  
-  .form-check-input {
-
-  }
-  
-  .text {
-    
-font-family: Arial, Helvetica, sans-serif;
-font-weight: bold;
-margin-right: 50px; 
-margin-left: 10px; 
-flex: 1;
-
-  }
-
 
   .btn-close {
     transition: transform 0.3s;
+    /* padding-right: 200px; */
+    margin-right: 150px;
+    /* width: 100%;  */
+      height: 1rem;
   }
-  
-  .btn-close:hover {
-    transform: rotate(90deg);
-  }
+
+}
